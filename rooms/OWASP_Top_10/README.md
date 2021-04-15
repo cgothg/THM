@@ -284,3 +284,111 @@ Check the hint
 websites_can_be_easily_defaced_with_xss
 ```
 
+### Task 21
+
+Who developed the Tomcat application?
+
+```
+Apache Software Foundation
+```
+
+What type of attack that crashes services can be performed with insecure deserialization?
+
+```
+Denial of Service
+```
+
+### Task 22
+
+Select the correct term of the following statement:
+
+
+if a dog was sleeping, would this be:
+
+A) A State
+B) A Behaviour 
+
+```
+A Behaviour
+```
+
+### Task 23
+
+What is the name of the base-2 formatting that data is sent across a network as? 
+
+```
+binary
+```
+
+### Task 24
+
+If a cookie had the path of webapp.com/login , what would the URL that the user has to visit be?
+
+```
+webapp.com/login
+```
+
+What is the acronym for the web technology that Secure cookies work over?
+
+```
+HTTPS
+```
+
+### Task 25
+
+You will see here that there are cookies are both plaintext encoded and base64 encoded. The first flag will be found in one of these cookies.
+
+Modifying Cookie Values
+Notice here that you have a cookie named "userType". You are currently a user, as confirmed by your information on the "myprofile" page.
+
+This application determines what you can and cannot see by your userType. What if you wanted to be come an admin?
+
+Double left-click the "Value" column of "userType" to modify the contents. Let's change our userType to "admin" and navigate to http://MACHINEIP/admin to answer the second flag.
+
+1st flag (cookie value)
+
+```
+THM{good_old_base64_huh}
+```
+
+2nd flag (admin dashboard)
+
+```
+THM{heres_the_admin_flag}
+```
+
+### Task 26
+
+If you have performed the steps correctly, you will now have a remote shell to your instance. No privilege escalation involved, look for the flag.txt flag!
+
+flag.txt
+
+```
+4a69a7ff9fd68
+```
+
+### Task 29
+
+Search for online book store on https://www.exploit-db.com/, then download the verified exploit. Run the code with http://MACHINEIP.
+
+How many characters are in /etc/passwd (use wc -c /etc/passwd to get the answer)
+```
+1611
+```
+
+### Task 30
+
+Put this knowledge to practise by analysing this sample log file.
+
+What IP address is the attacker using?
+
+```
+49.99.13.16
+```
+
+What kind of attack is being carried out?
+
+```
+brute force
+```
+
