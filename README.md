@@ -10,6 +10,13 @@
     │   ├── cacert.der
     │   ├── README.md
     │   └── xplatform-shortened.txt
+    ├── ENcryption_Crypto_101
+    │   ├── crack_this.zip
+    │   ├── id_rsa
+    │   ├── id_rsa_hash.txt
+    │   ├── message.gpg
+    │   ├── README.md
+    │   └── tryhackme.key
     ├── JohnTheRipper
     │   ├── crack_zip.zip
     │   ├── first_task_hashes
@@ -58,5 +65,6 @@
         ├── shell.jpg
         ├── shell.js
         └── UploadVulnsWordlist.txt
+
 
 ```
