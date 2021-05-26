@@ -90,5 +90,25 @@ What directory is the "autoscript.sh" under?
 /home/user4/Desktop
 ```
 
+### Task 9
+
+Let's go to user5's home directory, and run the file "script". What command do we think that it's executing?
+
+```
+ls
+```
+
+What would the command look like to open a bash shell, writing to a file with the name of the executable we're imitating
+
+```
+echo "/bin/bash" > ls
+```
+
+Great! Now we've made our imitation, we need to make it an executable. What command do we execute to do this?
+
+```
+chmod +x ls
+```
+
 
 
